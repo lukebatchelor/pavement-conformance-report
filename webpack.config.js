@@ -22,7 +22,10 @@ const config = {
     extensions: ['.ts', '.tsx', '.js'],
   },
   module: {
-    rules: [{ test: /\.tsx?$/, loader: 'ts-loader', exclude: '/node_modules/' }],
+    rules: [
+      { test: /\.tsx?$/, loader: 'ts-loader', exclude: '/node_modules/' },
+      { test: /\.worker\.js$/, use: { loader: 'worker-loader' } },
+    ],
   },
   plugins: [
     new webpack.EnvironmentPlugin({
