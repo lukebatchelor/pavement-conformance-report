@@ -6,7 +6,8 @@ import { useDropzone } from 'react-dropzone';
 const useStyles = makeStyles((theme) => ({
   paper: {
     textAlign: 'center',
-    minHeight: '50vh',
+    minHeight: '40vh',
+    minWidth: '50vw',
     paddingTop: theme.spacing(2),
     marginBottom: theme.spacing(4),
     display: 'flex',
@@ -27,10 +28,13 @@ export function Dropzone(props: DropzoneProps) {
   const classes = useStyles();
   const { dropTargetText, draggingTargetText, onDrop } = props;
 
+  const [rptFileName, setRptFileName] = useState<String>(null);
+
   const onDropCallback = useCallback(async (acceptedFiles: File[]) => {
     const file = acceptedFiles[0];
     const text = await file.text();
     onDrop && onDrop(text);
+    setRptFileName(file.name);
   }, []);
   const { getRootProps, getInputProps, isDragActive } = useDropzone({ onDrop: onDropCallback });
 
@@ -43,7 +47,7 @@ export function Dropzone(props: DropzoneProps) {
         ) : (
           <>
             <Typography variant="h5">
-              {dropTargetText || "Drag 'n' drop some files here, or click to select files"}
+              {rptFileName || dropTargetText || "Drag 'n' drop report file here, or click to select file"}
             </Typography>
             <AttachFileIcon fontSize="large" style={{ marginTop: '40px' }} />
           </>
