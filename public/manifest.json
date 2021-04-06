@@ -1,6 +1,6 @@
 {
-  "short_name": "Pavement Conformance Report",
-  "name": "Pavement Conformance Report",
+  "short_name": "12d report to pdf generator",
+  "name": "12d report to pdf generator",
   "icons": [
     {
       "src": "favicon.ico",

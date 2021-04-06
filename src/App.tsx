@@ -60,7 +60,7 @@ export function App(props: AppProps) {
         <Box mt={12} />
         <Box display="flex" flexDirection="column" alignItems="center">
           <Typography variant="body1" gutterBottom={true}>
-            Just a small webapp for converting d12 reports (<code>.rpt</code> files) to pdf whilst adding a header to
+            Just a small webapp for converting 12d reports (<code>.rpt</code> files) to pdf whilst adding a header to
             the top of each page.
           </Typography>
           <Typography variant="body1">

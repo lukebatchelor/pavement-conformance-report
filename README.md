@@ -1,6 +1,6 @@
-# d12 report to pdf generator
+# 12d report to pdf generator
 
-Small webapp for converting d12 reports to pdf's with a header attached.
+Small webapp for converting 12d reports to pdf's with a header attached.
 
 [https://pavement-conformance-report.netlify.app/](https://pavement-conformance-report.netlify.app/)
 
