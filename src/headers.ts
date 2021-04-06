@@ -1,6 +1,8 @@
 export const headers = [
-  'Asbuilt Pavement Conformance Report',
-  'Asbuilt Pavement Conformance Report2',
+  'TGA - Asbuilt Barrier',
+  'TGA - Asbuilt Batters',
+  'TGA - Asbuilt Drainage',
+  'TGA - Asbuilt Pavement',
   'Custom',
 ] as const;
 export type Header = typeof headers[number];

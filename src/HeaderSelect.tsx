@@ -20,7 +20,7 @@ export function HeaderSelect(props: HeaderSelectProps) {
   const classes = useStyles();
   const { onHeaderSelected, onCustomHeaderSelected } = props;
 
-  const [selectedHeader, setSelectedHeader] = useState<Header>('Asbuilt Pavement Conformance Report');
+  const [selectedHeader, setSelectedHeader] = useState<Header>(headers[0]);
   const [customHeader, setCustomHeader] = useState<File>(null);
 
   const onDropCallback = (acceptedFiles: Array<File>) => {
